@@ -9,7 +9,8 @@ gtaSound = new Audio('gtaSound.mpeg');
 gtaS=true;
 
 state=true;
-
+score=0;
+cross=true;
 //functionss
 function overSound() {
     if (g_o_s) {
@@ -98,9 +99,26 @@ setInterval(() => {
         document.querySelector('.g_o').textContent="Game Over...!!🫤 press F5 to restart the game";
 
     }
+    else if (offSetX < 145 && cross) {
+        score += 1;
+        updateScore(score);
+        cross = false;
+        setTimeout(() => {
+            cross = true;
+        }, 1000);
+        setTimeout(() => {
+            dino1 = parseFloat(window.getComputedStyle(dino, null).getPropertyValue('animation-duration'));
+            newDur = dino1 - 0.1;
+            dino.style.animationDuration = newDur + 's';
+            console.log('New animation duration: ', newDur)
+        }, 500);
+
+    }
 
 }, 10);
-
+function updateScore(score) {
+    document.querySelector('.score').textContent= "Your Score is: " + score;
+}
 
 
     
