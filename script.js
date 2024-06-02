@@ -18,7 +18,16 @@ function overSound() {
     }
 }
 
+setTimeout(() => {
+    pikachu = document.querySelector('.pikachu');
+    pikachu = document.querySelector('.dino');
 
+    pikachu.classList.remove('.pikachu');
+    pikachu.classList.remove('.dino');
+
+
+
+},5000);
 
 document.onkeydown = function key(e) {
   //  console.log("pressed ", e.keyCode);
@@ -165,6 +174,8 @@ function up() {
         }, 600);
         
     }); 
+   
+    
 
 }
 function left() {
@@ -172,6 +183,10 @@ function left() {
         pikachu = document.querySelector('.pikachu');
         pikachuX = parseInt(window.getComputedStyle(pikachu, null).getPropertyValue('left'));
         pikachu.style.left = pikachuX - 112 + "px";
+        if(document.querySelector('.game-cont').style.width <( 600+'px')){
+            console.log('hello');
+            pikachu.style.left = pikachuX - 60 + "px";
+        }
     });
     
 }
@@ -180,6 +195,10 @@ function right() {
         pikachu = document.querySelector('.pikachu');
         pikachuX = parseInt(window.getComputedStyle(pikachu, null).getPropertyValue('left'));
         pikachu.style.left = pikachuX + 112 + "px";
+        if(document.querySelector('.game-cont').style.width <( 600+'px')){
+            console.log('hello');
+            pikachu.style.left = pikachuX + 60 + "px";
+        }
     });
     
 }
