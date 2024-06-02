@@ -143,7 +143,7 @@ li{
 }
 
 
- @media (max-width:600px) {
+ @media (max-width:1024px) {
 .game-over{
     font-size: 3.7vmin;
    left: 15vmin;
@@ -276,13 +276,18 @@ body{
  .alert{
     display: block;
     color: black;
-    position: absolute;
-    top: 50%;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2.9vmin;
+
     font-weight: bolder;
  }
  .alert p{
-    padding: 10px;
+    padding: 30px 30px;
     
  }
 }

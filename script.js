@@ -119,7 +119,7 @@ setInterval(() => {
         }, 1000);
         setTimeout(() => {
             dino1 = parseFloat(window.getComputedStyle(dino, null).getPropertyValue('animation-duration'));
-            newDur = dino1 - 0.1;
+            newDur = dino1 - 0.08;
             dino.style.animationDuration = newDur + 's';
             //  console.log('New animation duration: ', newDur)
         }, 500);
