@@ -15,20 +15,29 @@
     <div class="game-cont">
         <div class="score"> Your Score is :0</div>
         <div class="buttons">
-            <button id="sound" onclick="sound()" class="sound_btn fa-solid fa-volume-high"></button>  
-            <button class="fa-solid fa-exclamation icon info_btn" ></button>
+            <button id="sound" onclick="sound()" class="sound_btn fa-solid fa-volume-high"></button>
+            <button class="fa-solid fa-exclamation icon info_btn"></button>
             <div name="about Game" class="text_field desc">
                 <li>To jump the character use UP arrow key</li>
                 <li>To move the character left and right use Left and Right arrow keys</li>
                 <li>To mute audio use F2 botton</li>
                 <li>To unmute Audio use F3 botton</li>
                 <li>To restart game refresh the(F5) page</li>
-                
+
             </div>
         </div>
-        <div class="game-over"><p class="g_o"> Pikachu ⚡ Dragon -by Niranjan</p></div>
+        <div class="game-over">
+            <p class="g_o"> Pikachu ⚡ Dragon -by Niranjan</p>
+        </div>
         <div class="pikachu"></div>
         <div class="dino dino1"></div>
+        <div class="move-btns">
+            <button class="joy-btn fa-solid fa-arrow-up" id="up-arrow" onclick="up()"></button>
+            <div class="move-lr">
+                <button class="joy-btn fa-solid fa-arrow-left" id="left-arrow" onclick="left()"></button>
+                <button class="joy-btn fa-solid fa-arrow-right" id="right-arrow" onclick="right()"></button>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

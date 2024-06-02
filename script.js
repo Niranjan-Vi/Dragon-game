@@ -21,7 +21,7 @@ function overSound() {
 
 
 document.onkeydown = function key(e) {
-    console.log("pressed ", e.keyCode);
+  //  console.log("pressed ", e.keyCode);
 
     if (e.keyCode == 38 || e.keyCode == 32) {
         if (pi_sound) {
@@ -29,11 +29,11 @@ document.onkeydown = function key(e) {
 
         }
 
-        console.log("jump pikachu")
+      //  console.log("jump pikachu")
         pikachu = document.querySelector('.pikachu');
-        pikachu.classList.add('jump');
+        pikachu.classList.add('jump','jump1');
         setTimeout(() => {
-            pikachu.classList.remove('jump');
+            pikachu.classList.remove('jump','jump1');
         }, 600);
     }
     if (e.keyCode == 39) {
@@ -99,7 +99,7 @@ setInterval(() => {
         document.querySelector('.g_o').textContent="Game Over...!!🫤 press F5 to restart the game";
 
     }
-    else if (offSetX < 145 && cross) {
+    else if (offSetX < 135 && cross) {
         score += 1;
         updateScore(score);
         cross = false;
@@ -110,7 +110,7 @@ setInterval(() => {
             dino1 = parseFloat(window.getComputedStyle(dino, null).getPropertyValue('animation-duration'));
             newDur = dino1 - 0.1;
             dino.style.animationDuration = newDur + 's';
-            console.log('New animation duration: ', newDur)
+          //  console.log('New animation duration: ', newDur)
         }, 500);
 
     }
@@ -145,4 +145,41 @@ function sound() {
         }
     }); 
 
+}
+
+
+    
+function up() {
+    document.querySelector('#up-arrow' ).addEventListener('click',function(){
+        if (pi_sound) {
+            pikachu_audio.play();
+        gtaSound.play();
+
+
+        }
+       // console.log("jump pikachu")
+        pikachu = document.querySelector('.pikachu');
+        pikachu.classList.add('jump','jump1');
+        setTimeout(() => {
+            pikachu.classList.remove('jump','jump1');
+        }, 600);
+        
+    }); 
+
+}
+function left() {
+    document.querySelector('#left-arrow').addEventListener('click',function(){
+        pikachu = document.querySelector('.pikachu');
+        pikachuX = parseInt(window.getComputedStyle(pikachu, null).getPropertyValue('left'));
+        pikachu.style.left = pikachuX - 112 + "px";
+    });
+    
+}
+function right() {
+    document.querySelector('#right-arrow').addEventListener('click',function(){
+        pikachu = document.querySelector('.pikachu');
+        pikachuX = parseInt(window.getComputedStyle(pikachu, null).getPropertyValue('left'));
+        pikachu.style.left = pikachuX + 112 + "px";
+    });
+    
 }
