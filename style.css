@@ -7,7 +7,7 @@ body{
 }
 .game-cont{
     background-image: url(bg.jpg);
-    width: 80;
+    
     height: 100vh;
     background-size:contain;
     background-repeat: repeat-x;
@@ -49,7 +49,7 @@ body{
     background-image: url(spyro-dragon.gif);
     height: 100px;
     width: 200px;
-    right:0px;
+    right:-50px;
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -138,9 +138,12 @@ li{
     }
 
 }
+ .alert{
+    display: none;
+}
 
 
-@media (max-width:600px) {
+ @media (max-width:600px) {
 .game-over{
     font-size: 3.7vmin;
    left: 15vmin;
@@ -153,9 +156,11 @@ li{
     height: 100vh;
     background-size:cover;
     background-repeat: repeat-x;
+    display: none;
 }
-.score{
-    font-size: 12px;
+/* .score{
+     font-size: 12px;
+    display: none;
 }
 .sound_btn{
     position: absolute;
@@ -167,6 +172,7 @@ li{
     background-color: transparent;
     border-radius: 50%;
     box-shadow: 2px 2px 20px 2px  white;
+    display: none;
 }
 .info_btn{
     position: absolute;
@@ -178,6 +184,7 @@ li{
     background-color: transparent;
     border-radius: 50%;
     box-shadow: 2px 2px 20px 2px  white;
+    display: none;
 }
 .text_field{
     height: 300px;
@@ -190,30 +197,36 @@ li{
     z-index: 999;
     background-color:rgba(20, 15, 15, 0.63);
     box-shadow: 5px 5px 50px rgb(157, 231, 9);
+    display: none;
     border: none;
     
     display: none;
 }
 li{
     font-size: 12px;
+    display: none;
 }
 .pikachu{
     height: 100px;
     width: 200px;
     left: -40px;
     bottom: 100px;
+    display: none;
 }
 .dino{
     height: 80px;
     width: 120px;
     right: 0px;
     bottom: 100px;
+    display: none;
 }
 .dino1{
     animation: dino_run 3s linear infinite;
+    display: none;
 }
 body{
     overflow: hidden;
+    display: none;
 }
 
 .move-btns{
@@ -223,13 +236,15 @@ body{
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    display: none;
 }
 .joy-btn{
     height: 50px;
     width: 50px;
     background-color: transparent;
     border-radius: 50%;
-    margin-left: 20px;
+    display: none;
+       margin-left: 20px;
 }
 
 @keyframes jump-for-mw{
@@ -249,11 +264,25 @@ body{
 }
 .jump1{
     animation: jump-for-mw 0.6s linear infinite;
+    display: none;
 }
 
 .info_btn:active +.text_field{
+    display: none;
+
+} */
+
+ 
+ .alert{
     display: block;
-}
-
-
+    color: black;
+    position: absolute;
+    top: 50%;
+    
+    font-weight: bolder;
+ }
+ .alert p{
+    padding: 10px;
+    
+ }
 }
